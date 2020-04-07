@@ -8,5 +8,14 @@ class Bear
         @bear_stomach = []
     end
 
+    def bear_catches_fish(fish)
+        @bear_stomach << fish
+    end
+
+    
+    
+
+    
+
 
 end

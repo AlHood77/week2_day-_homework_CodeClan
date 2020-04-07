@@ -10,12 +10,9 @@ class BearTest < MiniTest::Test
 
     def setup()
         @bear = Bear.new("Yogi", "Grizzly")
-        @fish1 = Fish.new("Carp")
-        @fish2 = Fish.new("Bream")
-        @fish3 = Fish.new("Roach")
-        @fish4 = Fish.new("Pike")
-        @fish5 = Fish.new("Trout")
-        @river = River.new("Amazon", [@fish1, @fish2, @fish3, @fish4, @fish5])
+        @fish1 = Fish.new("Nemo")
+        @fish2 = Fish.new("Salmon")
+        @river = River.new("Amazon", [@fish1, @fish2,])
     end
 
     def test_name_of_bear()
@@ -30,12 +27,15 @@ class BearTest < MiniTest::Test
         assert_equal(0, @bear.bear_stomach.count)
     end
 
-    def test_river_starts_with_a_number_of_fish()
-        assert_equal(5, @river.count)
-    end
+   def test_bear_can_eat_fish()
+        @bear.bear_catches_fish(@fish1)
+        assert_equal(1, @bear.bear_stomach.count)
+   end
 
+  
 
-
+ 
+    
 
 
 end
