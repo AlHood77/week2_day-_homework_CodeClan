@@ -8,7 +8,7 @@ class River
     end
 
     def river_loses_fish(name, fish)
-        @fish_in_river.delete
+        
         
     end
 
